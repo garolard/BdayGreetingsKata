@@ -29,12 +29,12 @@ namespace BdayGreetingsKata.Data.Repositories.IO
 
             return fileLines
                 .Skip(HeaderLines)
-                .Select(GetEmployeeFromLine)
+                .Select(EmployeeFromLine)
                 .Where(e => IsEmployeeBirthday(e, month, day))
                 .ToList();
         }
 
-        private Employee GetEmployeeFromLine(string line)
+        private Employee EmployeeFromLine(string line)
         {
             var data = line.Split(ColumnSeparator);
             var firstName = data[FirstNameColumn].Trim();
