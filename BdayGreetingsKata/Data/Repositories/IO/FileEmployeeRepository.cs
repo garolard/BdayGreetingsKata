@@ -6,7 +6,7 @@ using BdayGreetingsKata.Domain.Entities;
 
 namespace BdayGreetingsKata.Data.Repositories.IO
 {
-    public class FileEmployeeRepository : IEmployeeRepository
+    internal class FileEmployeeRepository : IEmployeeRepository
     {
         private const int FirstNameColumn = 1;
         private const int LastNameColumn = 0;
