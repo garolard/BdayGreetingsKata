@@ -1,0 +1,6 @@
+﻿last_name, first_name, date_of_birth, email
+Doe, John, 1982/10/08, john.doe@foobar.com
+Ann, Mary, 1975/09/11, mary.ann@foobar.com
+Parker, Peter, 1962/10/08, peter.parker@foobar.com
+Wayne, Bruce, 1939/01/05, the_batman@foobar.com
+Ferreiro, Gabriel, 1991/17/11, gbril9119@outlook.com

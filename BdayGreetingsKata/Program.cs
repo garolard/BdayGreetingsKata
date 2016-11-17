@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BdayGreetingsKata.Data.Messaging;
+using BdayGreetingsKata.Data.Repositories.IO;
 
 namespace BdayGreetingsKata
 {
@@ -10,6 +8,10 @@ namespace BdayGreetingsKata
     {
         static void Main(string[] args)
         {
+            var employeeRepo = new FileEmployeeRepository();
+            var messagingService = new FakeMessageService();
+            var birthdayService = new BirthdayService(employeeRepo, messagingService);
+            birthdayService.SendGreetings(DateTime.Today);
         }
     }
 }

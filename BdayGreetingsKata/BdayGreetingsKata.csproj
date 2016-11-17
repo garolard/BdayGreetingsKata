@@ -43,16 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FakeMessageService.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="FakeEmployeeRepository.cs" />
-    <Compile Include="IEmployeeRepository.cs" />
-    <Compile Include="IMessagingService.cs" />
+    <Compile Include="BirthdayService.cs" />
+    <Compile Include="Data\Messaging\FakeMessageService.cs" />
+    <Compile Include="Domain\Entities\Employee.cs" />
+    <Compile Include="Data\Repositories\Fake\FakeEmployeeRepository.cs" />
+    <Compile Include="Data\Repositories\IO\FileEmployeeRepository.cs" />
+    <Compile Include="Data\Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Data\Messaging\IMessagingService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\database.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
