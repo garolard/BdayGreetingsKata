@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="BirthdayService.cs" />
     <Compile Include="Data\Messaging\Internet\EmailMessagingService.cs" />
-    <Compile Include="Data\Messaging\FakeMessageService.cs" />
+    <Compile Include="Data\Messaging\Fake\FakeMessageService.cs" />
     <Compile Include="Domain\Entities\Employee.cs" />
     <Compile Include="Data\Repositories\Fake\FakeEmployeeRepository.cs" />
     <Compile Include="Data\Repositories\IO\FileEmployeeRepository.cs" />

@@ -1,7 +1,7 @@
 ﻿using System;
 using BdayGreetingsKata.Domain.Entities;
 
-namespace BdayGreetingsKata.Data.Messaging
+namespace BdayGreetingsKata.Data.Messaging.Fake
 {
     internal class FakeMessageService : IMessagingService
     {

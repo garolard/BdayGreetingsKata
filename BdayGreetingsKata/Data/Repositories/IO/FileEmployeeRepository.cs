@@ -47,8 +47,18 @@ namespace BdayGreetingsKata.Data.Repositories.IO
 
         private bool IsEmployeeBirthday(Employee employee, int month, int day)
         {
-            return employee.DateOfBirth.Month == month &&
-                   employee.DateOfBirth.Day == day;
+            if (employee.DateOfBirth.Day == 29 &&
+                employee.DateOfBirth.Month == 2 &&
+                !DateTime.IsLeapYear(DateTime.Today.Year))
+            {
+                var y = employee.DateOfBirth.Year;
+                var m = employee.DateOfBirth.Month;
+                return new DateTime(y, m, 28) == new DateTime(y, month, day);
+            }
+            else
+            {
+                return employee.DateOfBirth == new DateTime(employee.DateOfBirth.Year, month, day);
+            }
         }
     }
 }
