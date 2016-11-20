@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using BdayGreetingsKata.Data.Helpers;
 using BdayGreetingsKata.Domain.Entities;
 
 namespace BdayGreetingsKata.Data.Repositories.IO
@@ -19,10 +20,18 @@ namespace BdayGreetingsKata.Data.Repositories.IO
         private const string FilePath = @"Data\database.txt";
         private const string DateFormat = "yyyy/dd/MM";
 
+        private readonly IOHelper _ioHelper;
+
+
+        public FileEmployeeRepository(IOHelper helper)
+        {
+            _ioHelper = helper;
+        }
+
 
         public IList<Employee> FindEmployeesBornOn(int month, int day)
         {
-            var fileLines = File.ReadLines(FilePath).ToList();
+            var fileLines = _ioHelper.ReadFileLines(FilePath).ToList();
             if (!fileLines.Any() || fileLines.Count == 1)
             {
                 return new List<Employee>();

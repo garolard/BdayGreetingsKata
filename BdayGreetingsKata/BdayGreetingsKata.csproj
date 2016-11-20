@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BirthdayService.cs" />
+    <Compile Include="Data\Helpers\IOHelper.cs" />
     <Compile Include="Data\Messaging\Internet\EmailMessagingService.cs" />
     <Compile Include="Data\Messaging\Fake\FakeMessageService.cs" />
     <Compile Include="Domain\Entities\Employee.cs" />
