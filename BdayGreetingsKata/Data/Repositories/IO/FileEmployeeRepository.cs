@@ -17,6 +17,7 @@ namespace BdayGreetingsKata.Data.Repositories.IO
         private const char ColumnSeparator = ',';
 
         private const string FilePath = @"Data\database.txt";
+        private const string DateFormat = "yyyy/dd/MM";
 
 
         public IList<Employee> FindEmployeesBornOn(int month, int day)
@@ -40,7 +41,7 @@ namespace BdayGreetingsKata.Data.Repositories.IO
             var firstName = data[FirstNameColumn].Trim();
             var lastName = data[LastNameColumn].Trim();
             var email = data[EmailColumn].Trim();
-            var birthDate = DateTime.ParseExact(data[BirthdateColumn].Trim(), "yyyy/dd/MM", null);
+            var birthDate = DateTime.ParseExact(data[BirthdateColumn].Trim(), DateFormat, null);
 
             return new Employee(firstName, lastName, birthDate, email);
         }
